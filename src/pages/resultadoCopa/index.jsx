@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class ResultadoCopa extends Component {
-    render() {
-        return (
-            <div>Resultado copa</div>
-        );
-    }
+export default function ResultadoCopa() {
+
+    return (
+        <div>Resultado copa</div>
+    );
 }
