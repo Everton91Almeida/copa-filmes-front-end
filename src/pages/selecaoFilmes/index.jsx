@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import apiFilmes from "../../services/apiFilmes";
-import { CardFilme } from "../../components"
+import { CardFilme } from "../../components";
+import "./styles.css";
 
-export default function SelecaoFilmes() {
+export default function SelecaoFilmes(props) {
     const [filmes, setFilmes] = useState([]);
     const [selectecFilmes, setSelectecFilmes] = useState([]);
 
@@ -14,23 +15,35 @@ export default function SelecaoFilmes() {
         loadFilmes();
     }, []);
 
-    const selectFilmeHandle = (filme) =>
+    const handleSelect = (filme) =>
         setSelectecFilmes([...selectecFilmes, filme]);
 
-    const unselectFilmeHandle = (filme) =>
+    const handleUnselect = (filme) =>
         setSelectecFilmes(selectecFilmes.filter(item => item.id !== filme.id));
 
-    useEffect(() => console.log(selectecFilmes), [selectecFilmes]);
+    const handleClick = () =>
+        props.history.push("/resultado", selectecFilmes);
+
+    //useEffect(() => console.log(selectecFilmes), [selectecFilmes]);
 
     return (
         <>
-            {filmes.map(filme =>
-                <CardFilme
-                    key={filme.id}
-                    filme={filme}
-                    onSelect={() => selectFilmeHandle(filme)}
-                    onUnselect={() => unselectFilmeHandle(filme)}
-                />)}
+            <div className="page-header"></div>
+            <div className="info">
+                {selectecFilmes.length} de 8 filmes
+                <button className="button" onClick={() => handleClick()}>Gerar meu campeonato</button>
+            </div>
+            <div className="list">
+                {
+                    filmes.map(filme =>
+                        <CardFilme
+                            key={filme.id}
+                            filme={filme}
+                            onSelect={() => handleSelect(filme)}
+                            onUnselect={() => handleUnselect(filme)}
+                        />)
+                }
+            </div>
         </>
     );
 }

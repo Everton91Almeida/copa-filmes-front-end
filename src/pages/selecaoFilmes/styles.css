@@ -1,0 +1,25 @@
+.page-header{
+  height: 100px;
+  width: 100%;
+  background-color: dimgrey;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info{
+  color: white;
+  font-size: 24px;
+}
+
+.button{
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: #383838;
+  text-transform: uppercase;
+  border-radius: 2px;
+}

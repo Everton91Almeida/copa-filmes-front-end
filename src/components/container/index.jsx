@@ -3,7 +3,7 @@ import "./styles.css";
 
 const Container = props =>
   <div id="main-container">
-    <div id="container">{props.children}</div>
+    {props.children}
   </div>;
 
 export default Container;

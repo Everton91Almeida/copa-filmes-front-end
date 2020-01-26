@@ -13,14 +13,14 @@ const CardFilme = props => {
     }
 
     return (
-        <a className="selectable-area" href="#0" onClick={() => clickHandle()}>
-            <Card color={selected ? '#ddd' : '#fff'}>
+        <Card color={selected ? '#ddd' : '#fff'}>
+            <a className="selectable-area" href="#0" onClick={() => clickHandle()}>
                 <div className="content">
                     <div className="header">{props.filme.titulo}</div>
-                    <div className="content">{props.filme.ano}</div>
+                    <div>{props.filme.ano}</div>
                 </div>
-            </Card>
-        </a>
+            </a>
+        </Card >
     );
 };
 

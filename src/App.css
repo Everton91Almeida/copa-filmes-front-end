@@ -14,11 +14,7 @@ body,
 body {
   font-family: "Raleway", Arial, Tahoma, sans-serif;
   font-size: 12px;
-  background-color: #dedede;
+  background-color: lightgray;
   -webkit-font-smoothing: antialiased !important;
   overflow: hidden;
 }
-
-/* .hidden {
-  display: none;
-} */
