@@ -1,0 +1,36 @@
+.page-header{
+  height: 250px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: dimgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.app-title{
+  color: silver;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.page-title{
+  color: white;
+  font-size: 45px;
+}
+                
+.page-instructions{
+  color: white;
+  font-size: 14px;
+}
+
+.separator{
+  height: 4px;
+  width: 30px;
+  background-color: silver;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

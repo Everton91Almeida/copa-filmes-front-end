@@ -1,0 +1,14 @@
+.selectable-area{
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.content{
+    padding: 20px;
+    line-height: 20px;
+}
+
+.header{
+    font-weight: bold;
+    color: black;
+}

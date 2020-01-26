@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import apiFilmes from "../../services/apiFilmes";
+import { CardWinner, Button, Page } from "../../components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default function ResultadoCopa(props) {
     const [winners, setWinners] = useState([]);
@@ -12,6 +15,23 @@ export default function ResultadoCopa(props) {
         loadWinners();
     }, [props.location.state]);
 
+    const instructions = `Veja o resultado final da copa de filmes.`
 
-    return winners.map(winner => <div key={winner.titulo}>{winner.titulo}</div>);
+    return (
+        <Page
+            name="Resultado final"
+            instructions={instructions}
+        >
+            {winners.map(winner =>
+                <CardWinner
+                    key={winner.titulo}
+                    filme={winner}
+                />)}
+            <Button
+                onClick={() => props.history.push("/")}
+                title="Voltar"
+            >
+                <FontAwesomeIcon icon={faArrowLeft} />
+            </Button>
+        </Page>);
 }

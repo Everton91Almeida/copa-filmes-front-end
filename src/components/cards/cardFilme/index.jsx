@@ -13,7 +13,9 @@ const CardFilme = props => {
     }
 
     return (
-        <Card color={selected ? '#ddd' : '#fff'}>
+        <Card
+            color={selected ? '#ddd' : '#fff'}
+            hasHover={true}>
             <a className="selectable-area" href="#0" onClick={() => clickHandle()}>
                 <div className="content">
                     <div className="header">{props.filme.titulo}</div>
