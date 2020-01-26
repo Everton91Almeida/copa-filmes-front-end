@@ -1,14 +1,27 @@
-.selectable-area{
-    text-decoration: inherit;
-    color: inherit;
+.card-winner {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 80px;
+    margin: 6px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.content{
+.position{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    color: white;
+    font-size: 24px;
+    background-color: silver;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
     padding: 20px;
-    line-height: 20px;
-}
-
-.header{
-    font-weight: bold;
-    color: black;
+    color: dimgrey;
 }

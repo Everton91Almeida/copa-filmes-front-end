@@ -1,20 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
-import { Card } from "../..";
 
-const CardWinner = props => {
-    return (
-        <Card>
-            <div className="content">
-                <div className="header">{props.filme.titulo}</div>
-            </div>
-        </Card >
-    );
-};
+const CardWinner = props =>
+    <div className="card-winner">
+        <div className="position">{props.posicao}°</div>
+        <div className="title">{props.titulo}</div>
+    </div>;
 
 CardWinner.propTypes = {
-    filme: PropTypes.object.isRequired
+    posicao: PropTypes.number.isRequired,
+    titulo: PropTypes.string.isRequired
 };
 
 export default CardWinner;

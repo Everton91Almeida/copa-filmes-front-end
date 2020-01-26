@@ -18,20 +18,15 @@ export default function ResultadoCopa(props) {
     const instructions = `Veja o resultado final da copa de filmes.`
 
     return (
-        <Page
-            name="Resultado final"
-            instructions={instructions}
-        >
-            {winners.map(winner =>
+        <Page name="Resultado final" instructions={instructions}>
+            {winners.map((winner, index) =>
                 <CardWinner
-                    key={winner.titulo}
-                    filme={winner}
+                    key={winner.id}
+                    posicao={index + 1}
+                    titulo={winner.titulo}
                 />)}
-            <Button
-                onClick={() => props.history.push("/")}
-                title="Voltar"
-            >
+            <Button onClick={() => props.history.push("/")} title="Voltar">
                 <FontAwesomeIcon icon={faArrowLeft} />
             </Button>
         </Page>);
-}
+};
